@@ -1,9 +1,10 @@
-package com.hareshnayak.shoplist.db
+package com.hareshnayak.shoplist.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.hareshnayak.shoplist.data.db.enities.ShoppingItem
 
 
 @Database(

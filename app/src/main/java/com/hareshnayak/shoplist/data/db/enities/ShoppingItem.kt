@@ -1,4 +1,4 @@
-package com.hareshnayak.shoplist.db
+package com.hareshnayak.shoplist.data.db.enities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
