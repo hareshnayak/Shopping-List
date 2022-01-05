@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Shop List</string>
     <string name="icon">icon</string>
+    <string name="item">Item</string>
+    <string name="add_a_new_shopping_item">Add a new Shopping Item</string>
+    <string name="add">ADD</string>
+    <string name="cancel">CANCEL</string>
+    <string name="floating_action_button">Floating Action Button</string>
 </resources>

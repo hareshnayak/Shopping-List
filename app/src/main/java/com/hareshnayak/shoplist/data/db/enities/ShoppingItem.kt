@@ -16,6 +16,6 @@ data class ShoppingItem(
     var item_price :Int
 
 ) {
-    @PrimaryKey(autoGenerate = false)           // We don't need to manually add any id
-    val id : Int ?= null
+    @PrimaryKey(autoGenerate = true)           // We don't need to manually add any id
+    var id : Int? = null
 }

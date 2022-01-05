@@ -15,23 +15,25 @@
         android:layout_height="wrap_content"
         android:id="@+id/item_card"
         android:layout_margin="10dp"
-        android:elevation="10dp">
+        app:cardCornerRadius="20dp"
+        android:elevation="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_item_name"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:text=""
             android:gravity="start"
-            android:translationX="-90dp"
+            app:flow_horizontalAlign="start"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/delete"
+            app:layout_constraintBottom_toTopOf="@+id/iv_delete"
             app:layout_constraintEnd_toStartOf="@+id/tv_item_count">
         </TextView>
 
@@ -39,11 +41,10 @@
             android:id="@+id/tv_item_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:translationX="10dp"
             android:text=""
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/plus"
+            android:textColor="@color/teal_700"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_plus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_item_name"
             app:layout_constraintTop_toTopOf="parent">
@@ -52,13 +53,13 @@
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:translationX="10dp"
+            android:translationX="-40dp"
             android:layout_margin="10dp"
             android:id="@+id/iv_delete"
             android:contentDescription="@string/icon"
             android:src="@drawable/ic_delete"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="minus"
+            app:layout_constraintEnd_toStartOf="@id/iv_minus"
             app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
             app:layout_constraintBottom_toBottomOf="parent">
         </ImageView>
@@ -68,11 +69,11 @@
         android:layout_height="35dp"
         android:id="@+id/iv_minus"
         android:src="@drawable/ic_minus"
-            android:translationX="90dp"
+            android:translationX="70dp"
             android:contentDescription="@string/icon"
         app:layout_constraintStart_toEndOf="@+id/iv_delete"
         app:layout_constraintEnd_toStartOf="@id/iv_plus"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_count"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
         app:layout_constraintBottom_toBottomOf="parent">
         </ImageView>
 
@@ -82,11 +83,11 @@
             android:layout_height="35dp"
             android:contentDescription="@string/icon"
             android:src="@drawable/ic_plus"
-            android:translationX="60dp"
+            android:translationX="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_minus"
-            app:layout_constraintTop_toBottomOf="@+id/tv_item_count">
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_name">
         </ImageView>
 
 
